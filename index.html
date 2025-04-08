@@ -129,8 +129,8 @@
         <h1 class="name">Mapel XI IPS1</h1>
         <p class="about">Semua PR diingat sendiri jangan manja</p>
         <div class="btn-container">
-            <button class="btn" onclick="openQRIS()">Payment QRIS</button>
-<button class="btn" onclick="openQRIS()">Payment QRIS</button>
+            <button class="btn" onclick="openQRIS()">Senin</button>
+<button class="btn" onclick="openQRIS1()">Selasa</button>
 <a href="https://t.me/calistanewbieee" class="btn" target="_blank">Telegram</a>
             <a href="https://wa.me/62882007138253" class="btn" target="_blank">WhatsApp</a>
         </div>
@@ -144,8 +144,14 @@
         <span class="close" onclick="closeQRIS()">&times;</span>
 <h1>halo</h1>
     </div>
-
+<div class="qris-modal" id="qrisModal">
+        <span class="close" onclick="closeQRIS()">&times;</span>
+<h1>p</h1>
+    </div>
     <script>
+function openQRIS1() {
+            document.getElementById('qrisModal').style.display = 'flex';
+        }
         function openQRIS() {
             document.getElementById('qrisModal').style.display = 'flex';
         }
