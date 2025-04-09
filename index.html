@@ -6,18 +6,6 @@
   <title>Mapel - XI IPS1</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    @keyframes glow {
-      0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-      50% { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
-      100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: url('https://files.catbox.moe/lglj14.png') no-repeat center center fixed;
@@ -35,13 +23,18 @@
       background: rgba(30, 0, 0, 0.9);
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-      animation: fadeIn 1.5s ease-in-out;
     }
 
     h1.name {
       font-size: 32px;
       animation: glow 1.5s infinite alternate;
       margin-bottom: 20px;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+      50% { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
+      100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
     }
 
     .scroll-area {
@@ -55,36 +48,7 @@
       padding: 15px;
       background: rgba(50, 0, 0, 0.7);
       border-radius: 10px;
-      animation: fadeIn 1.5s ease-in-out;
     }
-    
-            .btn-container {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-            padding: 12px 25px;
-            font-size: 16px;
-            font-weight: 600;
-            color: white;
-            background: linear-gradient(135deg, #8b0000, #ff0000);
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
-            box-shadow: 0 0 10px #8b0000;
-        }
-        .btn:hover {
-            background: linear-gradient(135deg, #660000, #cc0000);
-            box-shadow: 0 0 20px #ff0000;
-            transform: scale(1.05);
-        }
 
     h2.about-title {
       font-size: 24px;
@@ -92,20 +56,24 @@
       color: #ffaaaa;
     }
 
-    p {
-      margin-bottom: 6px;
-    }
-
     audio {
       margin-top: 30px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 14px;
+      color: #ccc;
     }
 
-    /* Tambahan scrollbar styling (opsional) */
+    footer a {
+      color: #ff7777;
+      text-decoration: none;
+    }
+
     .scroll-area::-webkit-scrollbar {
       width: 6px;
     }
@@ -126,7 +94,6 @@
         <p>Sejarah Peminatan = 3 Jam</p>
         <p>B. Inggris LM = 4 Jam</p>
       </div>
-
       <div class="container2">
         <h2 class="about-title">Selasa</h2>
         <p>Sejarah Indonesia = 2 Jam</p>
@@ -134,27 +101,23 @@
         <p>B. Inggris = 2 Jam</p>
         <p>B. Indonesia = 3 Jam</p>
       </div>
-
       <div class="container2">
         <h2 class="about-title">Rabu</h2>
         <p>PJOK = 3 Jam</p>
         <p>Pend. Agama = 3 Jam</p>
         <p>Geografi = 2 Jam</p>
       </div>
-
       <div class="container2">
         <h2 class="about-title">Kamis</h2>
         <p>Sosiologi = 4 Jam</p>
         <p>Geografi = 2 Jam</p>
         <p>Matematika = 2 Jam</p>
       </div>
-
       <div class="container2">
         <h2 class="about-title">Jumat</h2>
         <p>Matematika = 2 Jam</p>
         <p>Ekonomi = 3 Jam</p>
       </div>
-
       <div class="container2">
         <h2 class="about-title">Sabtu</h2>
         <p>PKWU = 2 Jam</p>
@@ -164,18 +127,33 @@
         <p>PKn = 2 Jam</p>
       </div>
     </div>
-    
-          <audio controls autoplay>
-      <source src="https://files.catbox.moe/aspcxx.mp3" type="audio/mpeg">
+
+    <!-- Audio dengan lagu acak -->
+    <audio id="randomMusic" controls autoplay>
       Browser kamu tidak mendukung elemen audio.
-          </audio>
-<p style="margin-top: 40px; font-size: 13px; color: #ffaaaa; font-style: italic; display: flex; justify-content: center; align-items: center; gap: 6px;">
-  &mdash; Dibuat oleh <strong>Iball</strong> |
-  <a href="https://instagram.com/mhmdiqball14_" target="_blank" style="color: #ff5555; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 16px; height: 16px; vertical-align: middle;">
-    @mhmdiqball14_
-  </a>
-</p>
+    </audio>
+    <script>
+      const songs = [
+        "https://files.catbox.moe/aspcxx.mp3",
+        "https://files.catbox.moe/js1j2q.mp3",
+        "https://files.catbox.moe/6vknky.mp3"
+      ];
+      const randomIndex = Math.floor(Math.random() * songs.length);
+      const selectedSong = songs[randomIndex];
+      const audio = document.getElementById("randomMusic");
+      audio.src = selectedSong;
+      audio.load();
+      audio.play();
+    </script>
   </div>
+
+  <!-- Footer -->
+<footer style="margin-top: 40px; padding: 15px; background: #111; color: #ccc; font-size: 12px; text-align: center;">
+  <p>&copy; 2025 XI IPS 1 — Dibuat oleh <strong style="color: #ff6666;">Iball</strong></p>
+  <p>
+    <a href="https://instagram.com/mhmdiqball14_" target="_blank" style="color: #ff9999; text-decoration: none;">Instagram</a> |
+    <a href="https://t.me/Iballxz" target="_blank" style="color: #77ccff; text-decoration: none;">Telegram</a>
+  </p>
+</footer>
 </body>
 </html>
