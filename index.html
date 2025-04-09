@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapel - XIPS1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+            50% { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
+            100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://files.catbox.moe/lglj14.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .container1 {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(30, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container2 {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(30, 0, 0, 0.9);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+      
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 15px #ff0000;
+            animation: glow 1.5s infinite alternate;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #8b0000, #ff0000);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #8b0000;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #660000, #cc0000);
+            box-shadow: 0 0 20px #ff0000;
+            transform: scale(1.05);
+        }
+        .qris-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .qris-modal .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        audio {
+            margin-top: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container1">
+        <img src="https://files.catbox.moe/skjvi5.jpeg" alt="Profile" class="profile-img">
+        <h1 class="name">Mapel XI IPS1</h1>
+        <h2 class="about-title">Senin</h2>
+         <p class="about">Pembinaan Wakel = 1Jam</p>
+       <p class="name">Sejarah Peminatan = 3Jam</p>
+       <p class="ana">B.Inggris LM = 4Jam</p>
+       
+       <div class="container2">
+        <h2 class="about-title">Selasa</h2>
+         <p class="about">Sejarah Indonesia = 2Jam</p>
+       <p class="name">Ekonomi = 1Jam</p>
+       <p class="ana">B.Inggris = 2Jam</p>
+       <p class="ana">B.Indonesia = 3Jam</p>
+       
+       <div class="container2">
+        <h2 class="about-title">Rabu</h2>
+       <p class="about">Pjok = 3Jam</p>
+       <p class="name">Pend.Agama = 3Jam</p>
+       <p class="ana">Geografi = 2Jam</p>
+     
+       <div class="container2">
+        <h2 class="about-title">Kamis</h2>
+       <p class="about">Sosiologi = 4Jam</p>
+       <p class="name">Geografi = 2Jam</p>
+       <p class="ana">Matematika = 2Jam</p>
+     
+       <div class="container2">
+        <h2 class="about-title">Jum'at</h2>
+       <p class="about">Matematika = 2Jam</p>
+       <p class="name">Ekonomi = 3Jam</p>
+     
+       <div class="container2">
+        <h2 class="about-title">Sabtu</h2>
+       <p class="about">Pkwu = 2Jam</p>
+       <p class="about">Sejarah Peminatan = 1Jam</p>
+       <p class="about">B.Indonesia = 1Jam</p>
+       <p class="about">Seni Budaya = 2Jam</p>
+       <p class="name">Pkn = 2Jam</p>
+</body>
+</html>
