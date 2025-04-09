@@ -1,71 +1,64 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapel - XIPS1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-            50% { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
-            100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: url('https://files.catbox.moe/lglj14.png') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-        }
-        .container1 {
-            position: relative;
-            width: 95%;
-            max-width: 600px;
-            padding: 20px;
-            background: rgba(30, 0, 0, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        .container2 {
-            position: relative;
-            width: 95%
-            padding: 20px;
-            background: rgba(30, 0, 0, 0.9);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-      
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 0 15px #ff0000;
-            animation: glow 1.5s infinite alternate;
-            transition: transform 0.3s ease-in-out;
-        }
-        .profile-img:hover {
-            transform: scale(1.1);
-        }
-        .btn-container {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mapel - XI IPS1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+      50% { text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000; }
+      100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://files.catbox.moe/lglj14.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container1 {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(30, 0, 0, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1.name {
+      font-size: 32px;
+      animation: glow 1.5s infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    .scroll-area {
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    .container2 {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(50, 0, 0, 0.7);
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    
+            .btn-container {
             margin-top: 20px;
             display: flex;
             justify-content: center;
@@ -92,79 +85,98 @@
             box-shadow: 0 0 20px #ff0000;
             transform: scale(1.05);
         }
-        .qris-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        .qris-modal .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-        audio {
-            margin-top: 15px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+
+    h2.about-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ffaaaa;
+    }
+
+    p {
+      margin-bottom: 6px;
+    }
+
+    audio {
+      margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tambahan scrollbar styling (opsional) */
+    .scroll-area::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scroll-area::-webkit-scrollbar-thumb {
+      background-color: red;
+      border-radius: 3px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container1">
-        <h1 class="name">Mapel XI IPS1</h1>
+  <div class="container1">
+    <h1 class="name">Mapel XI IPS1</h1>
+
+    <div class="scroll-area">
+      <div class="container2">
         <h2 class="about-title">Senin</h2>
-         <p class="about">Pembinaan Wakel = 1Jam</p>
-       <p class="name">Sejarah Peminatan = 3Jam</p>
-       <p class="ana">B.Inggris LM = 4Jam</p>
-       
-       <div class="container2">
+        <p>Pembinaan Wakel = 1 Jam</p>
+        <p>Sejarah Peminatan = 3 Jam</p>
+        <p>B. Inggris LM = 4 Jam</p>
+      </div>
+
+      <div class="container2">
         <h2 class="about-title">Selasa</h2>
-         <p class="about">Sejarah Indonesia = 2Jam</p>
-       <p class="name">Ekonomi = 1Jam</p>
-       <p class="ana">B.Inggris = 2Jam</p>
-       <p class="ana">B.Indonesia = 3Jam</p>
-       
-       <div class="container2">
+        <p>Sejarah Indonesia = 2 Jam</p>
+        <p>Ekonomi = 1 Jam</p>
+        <p>B. Inggris = 2 Jam</p>
+        <p>B. Indonesia = 3 Jam</p>
+      </div>
+
+      <div class="container2">
         <h2 class="about-title">Rabu</h2>
-       <p class="about">Pjok = 3Jam</p>
-       <p class="name">Pend.Agama = 3Jam</p>
-       <p class="ana">Geografi = 2Jam</p>
-     
-       <div class="container2">
+        <p>PJOK = 3 Jam</p>
+        <p>Pend. Agama = 3 Jam</p>
+        <p>Geografi = 2 Jam</p>
+      </div>
+
+      <div class="container2">
         <h2 class="about-title">Kamis</h2>
-       <p class="about">Sosiologi = 4Jam</p>
-       <p class="name">Geografi = 2Jam</p>
-       <p class="ana">Matematika = 2Jam</p>
-     
-       <div class="container2">
-        <h2 class="about-title">Jum'at</h2>
-       <p class="about">Matematika = 2Jam</p>
-       <p class="name">Ekonomi = 3Jam</p>
-     
-       <div class="container2">
+        <p>Sosiologi = 4 Jam</p>
+        <p>Geografi = 2 Jam</p>
+        <p>Matematika = 2 Jam</p>
+      </div>
+
+      <div class="container2">
+        <h2 class="about-title">Jumat</h2>
+        <p>Matematika = 2 Jam</p>
+        <p>Ekonomi = 3 Jam</p>
+      </div>
+
+      <div class="container2">
         <h2 class="about-title">Sabtu</h2>
-       <p class="about">Pkwu = 2Jam</p>
-       <p class="about">Sejarah Peminatan = 1Jam</p>
-       <p class="about">B.Indonesia = 1Jam</p>
-       <p class="about">Seni Budaya = 2Jam</p>
-       <p class="name">Pkn = 2Jam</p>
-       
-       </div>
- <audio controls>
-            <source src="https://files.catbox.moe/aspcxx.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <p>PKWU = 2 Jam</p>
+        <p>Sejarah Peminatan = 1 Jam</p>
+        <p>B. Indonesia = 1 Jam</p>
+        <p>Seni Budaya = 2 Jam</p>
+        <p>PKn = 2 Jam</p>
+      </div>
+    </div>
+
+ <
+    <audio controls>
+  <source src="https://files.catbox.moe/aspcxx.mp3" type="audio/mpeg">
+  Browser kamu tidak mendukung elemen audio.
+</audio>
+<p style="margin-top: 40px; font-size: 13px; color: #ffaaaa; font-style: italic; display: flex; justify-content: center; align-items: center; gap: 6px;">
+  &mdash; Dibuat oleh <strong>Iball</strong> |
+  <a href="https://instagram.com/mhmdiqball14_" target="_blank" style="color: #ff5555; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 16px; height: 16px; vertical-align: middle;">
+    @mhmdiqball14_
+  </a>
+</p>
+  </div>
 </body>
 </html>
